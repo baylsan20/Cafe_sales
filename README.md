@@ -1,41 +1,46 @@
-Cafe Sales Data Analysis
+# Cafe Sales Data Analysis
 
-A complete data cleaning and exploratory data analysis (EDA) project using real-world messy cafe sales data to uncover actionable business insights with Python.
+## Project Overview
 
-The Idea
+A data cleaning and **Exploratory Data Analysis (EDA)** project using real-world messy cafe sales data with **Python**, focused on uncovering sales patterns and actionable business insights.
 
-The goal was to transform raw cafe transaction data into a clean, analysis-ready dataset and use it to identify sales patterns, customer spending behavior, top-selling products, and high-performing periods.
+## Project Goal
 
-The Problem
+The goal was to transform raw transaction data into a clean, analysis-ready dataset and analyze:
 
-The raw dataset dirty_cafe_sales.csv contained several data quality issues:
+* Sales patterns
+* Customer spending behavior
+* Top-selling products
+* High-performing periods
 
-* Wrong data types in numerical and date columns
-* Missing values, including 2,579 in Payment Method and 3,265 in Location
-* Corrupted entries containing ERROR
+## Data Quality Issues
+
+The raw `dirty_cafe_sales.csv` dataset contained several data quality problems:
+
+* Incorrect data types
+* Missing values, including **2,579** in Payment Method and **3,265** in Location
+* Corrupted `ERROR` entries
 * Inconsistent categorical labels
-* 232 outliers in Total Spent
+* **232 outliers** in Total Spent
 
-The Solution
+## Data Cleaning
 
-Built a data cleaning pipeline using Pandas:
+Built a data cleaning workflow using **Pandas**:
 
-* Converted numerical columns and Transaction Date to appropriate data types
-* Removed records with missing critical fields
-* Imputed missing numerical values using mean/median based on distribution
-* Imputed categorical values using the mode
-* Standardized categorical labels using strip() and title()
-* Converted ERROR values to NaN and handled them using appropriate imputation methods
-* Detected and capped outliers in Total Spent using the IQR method
-* Verified the dataset contained zero null values and no remaining errors
-* Exported the cleaned dataset as clean_cafe_sales.csv
+* Converted numerical and date columns to appropriate data types
+* Handled missing values using mean, median, or mode based on the data
+* Converted `ERROR` values to `NaN` and handled them appropriately
+* Standardized categorical labels using `strip()` and `title()`
+* Detected and capped outliers in Total Spent using the **IQR method**
+* Validated the final dataset to ensure there were no remaining null values or errors
+* Exported the cleaned dataset as `clean_cafe_sales.csv`
 
-Exploratory Data Analysis
+## Exploratory Data Analysis
 
-Performed EDA using Matplotlib and Seaborn to analyze:
+Performed EDA using **Matplotlib** and **Seaborn** to analyze:
 
 * Descriptive statistics and spending distributions
-* Outliers across numerical variables
+* Numerical outliers
 * Correlations between Quantity, Price, and Total Spent
 * Monthly and quarterly sales trends
 * Top-selling products by month
@@ -43,27 +48,28 @@ Performed EDA using Matplotlib and Seaborn to analyze:
 * Price vs. Quantity relationship
 * Sales performance by day of the week
 
-Key Findings
+## Key Findings
 
-* Quantity and Total Spent showed a positive correlation of 0.69
-* October was the strongest month, while February was the weakest
-* Salad was the top-selling item in most months
-* Weekends showed the strongest sales performance
-* Price and quantity showed no strong linear relationship
+* **Quantity and Total Spent** had a positive correlation of **0.69**
+* **October** was the strongest month, while **February** was the weakest
+* **Salad** was the top-selling product in most months
+* **Weekends** showed the strongest sales performance
+* Price and quantity showed **no strong linear relationship**
 
-Business Insights
+## Business Insights
 
-The findings can support sales forecasting, inventory planning, and staffing decisions.
+The analysis can support business decisions related to sales, inventory, and staffing:
 
 * Increase staffing and inventory during weekends
 * Consider targeted promotions during weaker periods such as February
-* Maintain sufficient inventory of high-demand products such as Salad
-* Use the identified sales patterns as a foundation for future forecasting models
+* Maintain sufficient inventory for high-demand products such as Salad
+* Use the identified sales patterns as a foundation for future forecasting
 
-Tech Stack
+## Tech Stack
 
-Python | Pandas | Matplotlib | Seaborn
+**Python | Pandas | Matplotlib | Seaborn**
 
-Key Takeaway
+## Key Takeaway
 
-This project demonstrates an end-to-end Data Analyst workflow: identifying data quality issues, applying appropriate cleaning techniques, handling outliers, performing EDA, and translating data into actionable business insights.
+This project demonstrates an end-to-end **Data Analyst workflow**: identifying data quality issues, cleaning and transforming data, handling outliers, performing EDA, and translating findings into actionable business insights.
+
